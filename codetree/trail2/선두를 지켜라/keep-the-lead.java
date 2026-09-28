@@ -18,7 +18,6 @@ public class Main {
             B[i][1] = sc.nextInt();
         }
 
-        // int MAX_TIME = 1002;
         int[] posA = new int[totalTime + 1]; // 매 시간마다의 위치
         int[] posB = new int[totalTime + 1];
 
