@@ -10,7 +10,6 @@ public class Main {
             }
         }
 
-
         int[] dx = new int[]{1,0,-1,0}; // 동남서북
         int[] dy = new int[]{0,-1,0,1};
         int cells = 0;
@@ -20,9 +19,9 @@ public class Main {
                 count = 0;
 
                 for(int d=0; d<4; d++){
-                    int targetX = i+dx[d];
-                    int targetY = j+dy[d];
-                    if( inRange(targetX, targetY, n) && arr[targetX][targetY] == 1){
+                    int nx = i+dx[d];
+                    int ny = j+dy[d];
+                    if( inRange(nx, ny, n) && arr[nx][ny] == 1){
                         count++;
                         if(count >= 3){
                             cells++;
@@ -32,14 +31,11 @@ public class Main {
                 }
             }
         }
-
         System.out.print(cells);
-
     }
 
     public static boolean inRange(int x, int y, int n){
         return x >= 0 && y >= 0 &&  x < n && y < n;
     }
-
 
 }
