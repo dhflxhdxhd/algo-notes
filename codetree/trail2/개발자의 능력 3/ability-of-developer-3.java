@@ -15,9 +15,9 @@ public class Main {
         for(int i=0; i<ability.length - 2; i++){
             for(int j=i+1; j<ability.length-1; j++){
                 for(int k=j+1; k<ability.length; k++){
-                    int sum = ability[i] + ability[j] + ability[k];
-                    int restSum = total - sum;
-                    int diff = Math.abs(sum-restSum);
+                    int teamA = ability[i] + ability[j] + ability[k];
+                    int teamB = total - teamA;
+                    int diff = Math.abs(teamA - teamB);
                     minDiff = Math.min(diff, minDiff);
                 }
             }
